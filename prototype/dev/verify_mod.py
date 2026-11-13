@@ -180,10 +180,26 @@ def transaction_tests():
         passed('Simulated mid-install failure rolls back all game files')
 
 
+def path_compatibility_tests():
+    import ast
+    source = (PKG / 'install.py').read_text()
+    tree = ast.parse(source, feature_version=(3, 8))
+    assert not any(isinstance(n, ast.Attribute) and n.attr == 'is_relative_to' for n in ast.walk(tree))
+    with tempfile.TemporaryDirectory(prefix='aetherian-path-', dir=ROOT) as tmp:
+        root = Path(tmp)
+        assert installer.safe_path(root, 'Data/example.txt') == root / 'Data/example.txt'
+        for relative in ['../escape.txt', '/tmp/escape.txt', 'Data/../../escape.txt', 'C:\\escape.txt']:
+            must_fail(lambda: installer.safe_path(root, relative))
+        (root / 'outside').symlink_to('/tmp', target_is_directory=True)
+        must_fail(lambda: installer.safe_path(root, 'outside/escape.txt'))
+    passed('Installer accepts Python 3.8 syntax and avoids is_relative_to; traversal and symlink escape rejected')
+
+
 if __name__ == '__main__':
     validate_resources()
     test_resource_logic()
     transaction_tests()
+    path_compatibility_tests()
     report = {'scope': 'STATIC VALIDATION AND INSTALLER TESTS ONLY', 'runtime_tested': False,
               'checks_passed': checks}
     (PKG / 'validation.json').write_text(json.dumps(report, indent=2) + '\n')

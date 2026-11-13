@@ -12,6 +12,7 @@
     "Uninstall refuses to overwrite user edits; no partial restoration",
     "Install/uninstall restores all original bytes and removes new resources",
     "Source mismatch aborts before any game file changes",
-    "Simulated mid-install failure rolls back all game files"
+    "Simulated mid-install failure rolls back all game files",
+    "Installer accepts Python 3.8 syntax and avoids is_relative_to; traversal and symlink escape rejected"
   ]
 }

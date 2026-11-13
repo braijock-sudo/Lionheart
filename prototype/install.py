@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reversible, hash-checked installer. Requires Python 3.10 or newer."""
+"""Reversible, hash-checked installer. Requires Python 3.8 or newer."""
 import argparse
 import hashlib
 import json
@@ -22,8 +22,10 @@ def safe_path(root, relative):
     if p.is_absolute() or '..' in p.parts or '\\' in relative or ':' in relative:
         raise ValueError(f'Unsafe manifest path: {relative}')
     target = root.joinpath(p)
-    if not target.resolve().is_relative_to(root.resolve()):
-        raise ValueError(f'Path leaves game directory: {relative}')
+    try:
+        target.resolve().relative_to(root.resolve())
+    except ValueError:
+        raise ValueError(f'Path leaves game directory: {relative}') from None
     return target
 
 
@@ -154,4 +156,6 @@ def main():
 
 
 if __name__ == '__main__':
+    if sys.version_info < (3, 8):
+        sys.exit('ERROR: Python 3.8 or newer is required. Check your version with: py -3 --version')
     sys.exit(main())

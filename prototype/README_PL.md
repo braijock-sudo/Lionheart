@@ -40,7 +40,7 @@ Na tym etapie można użyć tej zdolności także bez założonego głównego cz
 
 ## Instalacja na Windows
 
-Wymagany **Python 3.10 lub nowszy**. Zamknij grę. Użyj osobnej kopii instalacji
+Wymagany **Python 3.8 lub nowszy**. Zamknij grę. Użyj osobnej kopii instalacji
 i nowej rozgrywki testowej — nowe zasoby zapisane w sejwie nie znikną automatycznie
 po odinstalowaniu moda.
 
@@ -117,6 +117,7 @@ Nie usuwaj całego cache ani archiwum gry w celu wymuszania działania.
 ## Źródła i testy
 
 `dev/` zawiera generator zasobów, parser formatu, testy i skrypt Blender.
+Narzędzia deweloperskie wymagają Pythona 3.10 lub nowszego; instalator działa od 3.8.
 Generator odnosi się do ścieżek roboczych autora; przy samodzielnym budowaniu
 ustaw `BASE` i `OUT` oraz lokalizację spisu archiwum w skrypcie testowym.
 Do instalacji gotowej paczki te skrypty nie są potrzebne.

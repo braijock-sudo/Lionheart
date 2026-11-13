@@ -1,3 +1,9 @@
+# Poprawka instalatora — zgodność z Pythonem 3.8
+
+- Zastąpiono `Path.is_relative_to` sprawdzaniem `relative_to`, zachowując kontrolę ścieżek.
+- Dodano czytelny komunikat dla Pythona starszego niż 3.8.
+- Dane gry i zachowanie prototypu pozostają bez zmian.
+
 # 0.1 — prototyp eksperymentalny
 
 - Dodano rasę Aetherian jako osobny zasób `.Race` z zastępczym modelem kobiety.
