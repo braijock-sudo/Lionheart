@@ -2,7 +2,15 @@
 
 Eksperymentalny prototyp 0.1 dla Lionheart: Legacy of the Crusader.
 
-## Pobieranie
+> **Zgłoszona awaria pełnego prototypu 0.1:** gra zamyka się po „Rozpocznij grę”, przed kreatorem postaci. Przyczyna nie została ustalona. Odinstaluj pełny prototyp i sprawdź grę bez moda przed kolejnym testem.
+
+## Diagnostyka
+
+[Instrukcja testu samej rasy](diagnostics/RACE_ONLY_PL.md) · [Skrypt diagnostyczny](diagnostics/race_only.py)
+
+Skrypt używa pliku rasy z paczki, którą już masz. Nie zawiera zasobów gry ani ich nie pobiera. Test dodaje tylko tę jedną definicję, bez zmian umiejętności, many i dialogów. Nie jest poprawioną pełną wersją moda.
+
+## Archiwalna paczka 0.1 — zgłoszona awaria
 
 [Pobierz Aetherian-0.1-prototype.zip](https://github.com/braijock-sudo/Lionheart/raw/refs/heads/main/downloads/Aetherian-0.1-prototype.zip)
 
