@@ -1,0 +1,117 @@
+CInventoryItem
+{
+	PlugIn Behaviors=Array
+	{
+		Item Count=2
+		PlugIn Behavior=CPlugInBehaviorProjectile
+		{
+			Projectile Model=Spell Effects/Shots/Ice Ring
+			Stop At Target Position=1
+			Num Seconds Allowed To Live=-1
+		}
+		PlugIn Behavior=CPlugInBehaviorDamage
+		{
+			Hit Or Miss=Damage Types/Damage Hit Or Miss/AlwaysHit
+			Cache Hit Or Miss Result=1
+			Hit Margin=0
+			Damages=Array
+			{
+				Item Count=3
+				Damage=CXRPGDamage
+				{
+					Damage Type=Damage Types/Slashing
+					Damage Amount=CRandom
+					{
+						Operator=
+						Minimum=CConstant
+						{
+							Constant Value=7
+						}
+						Maximum=CConstant
+						{
+							Constant Value=11
+						}
+					}
+				}
+				Damage=CXRPGDamage
+				{
+					Damage Type=Damage Types/Slashing
+					Damage Amount=CMultiply
+					{
+						Operand1=CVariableDerivedCharacterAttribute
+						{
+							Character Attribute=Derived Character Attributes/Aetherian/Offhand Active
+						}
+						Operator=
+						Operand2=CRandom
+						{
+							Operator=
+							Minimum=CConstant
+							{
+								Constant Value=1
+							}
+							Maximum=CConstant
+							{
+								Constant Value=3
+							}
+						}
+					}
+				}
+				Damage=CXRPGDamage
+				{
+					Damage Type=Damage Types/Fire
+					Damage Amount=CMultiply
+					{
+						Operand1=CVariableDerivedCharacterAttribute
+						{
+							Character Attribute=Derived Character Attributes/Aetherian/Divine Fire Active
+						}
+						Operator=
+						Operand2=CRandom
+						{
+							Operator=
+							Minimum=CConstant
+							{
+								Constant Value=2
+							}
+							Maximum=CConstant
+							{
+								Constant Value=4
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	Value=CConstant
+	{
+		Constant Value=0
+	}
+	Encumbrance=2
+	On the ground=Items/Projectiles/Arrow_Bullet
+	Requirements=Array
+	{
+		Item Count=0
+	}
+	Display Name=Light Chakram Projectile
+	Description=Arrow
+	Inventory Window Images=Array
+	{
+		Basic=!Unknown Model
+		Better=!Unknown Model
+		Special=!Unknown Model
+	}
+	Whole Item Display Name=
+	Whole Item Description=
+	Number Of Additions Added=0
+	Slot Used In=Character Slot Types/!None
+	Sub Slot Used In=0
+	Number Hands Needed=None
+	Unique Select ID=0
+	IsCurrentlyUsedByPlayer=0
+	Catagory for display Grouping=Inventory/Grouping Catagories/!none
+	Inventory Addition Group=Inventory/!None
+	Item Grade=Basic
+	Origonal Item=Spell Projectiles/Aetherian/Light Chakram
+}

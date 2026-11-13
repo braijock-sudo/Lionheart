@@ -1,0 +1,56 @@
+CSkillDescription
+{
+	PlugIn Behaviors=Array
+	{
+		Item Count=0
+	}
+	Display Name=Aetherian - dyscypliny swiatla
+	Parent Display Template=
+	Description=Racial abilities. Energy uses the existing Mana pool in this prototype.
+	Character Creation Screen Description=Racial abilities. Energy uses the existing Mana pool in this prototype.
+	Expressions=CNamedExpressionsArray
+	{
+		Expressions=Array
+		{
+			Array Count=0
+		}
+	}
+	Parent Skill=Skills/Fight
+	Value Type=Normal
+	Value Differential=0
+	Can be selected as Tag Skill=0
+	Image=Skills/Magic Divine/Defensive/Physical Aura
+	Amount To Increase Value By With Each Upgrade=0
+	Minimum Value=-300
+	Maximum Value=300
+	Sort Priority=1
+	Initial Value=CConstant
+	{
+		Constant Value=1
+	}
+	Initial Minimum & Maximum=-300.000000,300.000000
+	Display and Cast Requirements=Array
+	{
+		Item Count=1
+		Requirements=CIsRace
+		{
+			Acceptable Races=Array
+			{
+				Item Count=1
+				Acceptable Race=Races/Aetherian
+			}
+		}
+	}
+	Cast Requirements=Array
+	{
+		Item Count=1
+		Requirements=CIsRace
+		{
+			Acceptable Races=Array
+			{
+				Item Count=1
+				Acceptable Race=Races/Aetherian
+			}
+		}
+	}
+}

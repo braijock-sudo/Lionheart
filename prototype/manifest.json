@@ -1,0 +1,1199 @@
+{
+  "version": "0.1.0-experimental",
+  "runtime_tested": false,
+  "files": [
+    {
+      "path": "Data/Resources/Derived Character Attributes/Aetherian/Divine Fire Active.DerivedCharacterAttribute",
+      "sha256": "a7178041f120a2b564485aa6445a556e574a8a7fe70dd857456dade527376c65"
+    },
+    {
+      "path": "Data/Resources/Derived Character Attributes/Aetherian/Offhand Active.DerivedCharacterAttribute",
+      "sha256": "fe402030aa8e9ec5516cdafcc3e42b23742147a7f2b092dfe6d060856124f065"
+    },
+    {
+      "path": "Data/Resources/Derived Character Attributes/Aetherian/Starter Received.DerivedCharacterAttribute",
+      "sha256": "494a54209246b81797bd30f2764ccfb8d404fb0fbe55629a327c62328f3573cb"
+    },
+    {
+      "path": "Data/Resources/Races/Aetherian.Race",
+      "sha256": "93def6262b82b3f0eb30c786558cb5afa5a8bffe640178ff10ada5443db66732"
+    },
+    {
+      "path": "Data/Resources/Skills/Aetherian.Skill",
+      "sha256": "d97885d85837d9d5eaef4eaa952152fe37e546c6399ca2eba197bf2880df8a8c"
+    },
+    {
+      "path": "Data/Resources/Inventory Items/Aetherian/Dawn Chakram.InventoryItem",
+      "sha256": "7a491d121fcf0f4d98d7d8b75f98352dd248cf05aee2bad7777e897de3404838"
+    },
+    {
+      "path": "Data/Resources/Inventory Items/Aetherian/Dusk Chakram.InventoryItem",
+      "sha256": "4b07e8e76ce2c9981d8475058cd524bd13db347b221825d3db5eb9a0acda09d9"
+    },
+    {
+      "path": "Data/Resources/Spell Projectiles/Aetherian/Light Chakram.InventoryItem",
+      "sha256": "cf9c57cdaa6ab71508ad031fdcff4ce67b3b7024ef1a7721533c8f820bbc2f96"
+    },
+    {
+      "path": "Data/Resources/Skills/Aetherian/Chakram Throw.Skill",
+      "sha256": "480e10421834d44896cef9b18e9c861a03f17e95299fe0da75641cb71497f41b"
+    },
+    {
+      "path": "Data/Resources/Skills/Aetherian/Divine Fire.Skill",
+      "sha256": "69ba41163d5a99fbe4c0356b5f818d54c9cadff724beec629641528b4aa9e861"
+    },
+    {
+      "path": "Data/Resources/Skills/Aetherian/Wings of Dawn.Skill",
+      "sha256": "9adee213c0b67541fa83a6a0a09421c102a6bd51bfea32b756b9eae70986c6b0"
+    }
+  ],
+  "patches": [
+    {
+      "path": "Data/Resources/Derived Character Attributes/Mana Capacity.DerivedCharacterAttribute",
+      "source_sha256": "d7f827475bfe05aa25f021d9a2210fc9587898d4bbcc54887afeba8d2397ccdc",
+      "result_sha256": "bb1f422afbefa0f2a58a353ed787141f94ba52a89a15a86c1a811480dd0804ee",
+      "replacements": [
+        {
+          "old": "\tExpression=CExpressionRound\r\n\t{\r\n\t\tOperand1=CAdd\r\n\t\t{\r\n\t\t\tOperand1=CVariableDerivedCharacterAttribute\r\n\t\t\t{\r\n\t\t\t\tCharacter Attribute=Derived Character Attributes/Mana Capacity Magic Enhancer\r\n\t\t\t}\r\n\t\t\tOperator=\r\n\t\t\tOperand2=CAdd\r\n\t\t\t{\r\n\t\t\t\tOperand1=CAdd\r\n\t\t\t\t{\r\n\t\t\t\t\tOperand1=CMultiply\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tOperand1=CVariableCharacterAttribute\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tCharacter Attribute=Character Attributes/(PE) Perception\r\n\t\t\t\t\t\t\tEnforce Value Range Limits=1\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\tOperand2=CConstant\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tConstant Value=2\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t\tOperator=\r\n\t\t\t\t\tOperand2=CMultiply\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tOperand1=CConstant\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tConstant Value=3\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\tOperand2=CAdd\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tOperand1=CVariableCharacterAttribute\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tCharacter Attribute=Character Attributes/(CH) Charisma\r\n\t\t\t\t\t\t\t\tEnforce Value Range Limits=1\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\tOperand2=CMultiply\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tOperand1=CConstant\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tConstant Value=0.5\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\t\tOperand2=CVariableCharacterAttribute\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tCharacter Attribute=Character Attributes/(LK) Luck\r\n\t\t\t\t\t\t\t\t\tEnforce Value Range Limits=1\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t\tOperator=\r\n\t\t\t\tOperand2=CMultiply\r\n\t\t\t\t{\r\n\t\t\t\t\tOperand1=CAdd\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tOperand1=CAdd\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tOperand1=CVariableSkill\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tSkill=Skills/Thought\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\tOperand2=CVariableSkill\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tSkill=Skills/Tribal\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\tOperand2=CVariableSkill\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tSkill=Skills/Divine\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t\tOperator=\r\n\t\t\t\t\tOperand2=CDivide\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tOperand1=CAdd\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tOperand1=CMultiply\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tOperand1=CConstant\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tConstant Value=2\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\t\tOperand2=CVariableCharacterAttribute\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tCharacter Attribute=Character Attributes/(CH) Charisma\r\n\t\t\t\t\t\t\t\t\tEnforce Value Range Limits=1\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\tOperand2=CVariableCharacterAttribute\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tCharacter Attribute=Character Attributes/(PE) Perception\r\n\t\t\t\t\t\t\t\tEnforce Value Range Limits=1\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\tOperand2=CConstant\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tConstant Value=12\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "new": "\tExpression=CIfExpression\r\n\t{\r\n\t\tCondition=CIsRace\r\n\t\t{\r\n\t\t\tAcceptable Races=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=1\r\n\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t}\r\n\t\t}\r\n\t\tOperatorPart1=\r\n\t\tValue if True =CConstant\r\n\t\t{\r\n\t\t\tConstant Value=100\r\n\t\t}\r\n\t\tOperatorPart2=\r\n\t\tValue if False=CExpressionRound\r\n\t\t{\r\n\t\t\tOperand1=CAdd\r\n\t\t\t{\r\n\t\t\t\tOperand1=CVariableDerivedCharacterAttribute\r\n\t\t\t\t{\r\n\t\t\t\t\tCharacter Attribute=Derived Character Attributes/Mana Capacity Magic Enhancer\r\n\t\t\t\t}\r\n\t\t\t\tOperator=\r\n\t\t\t\tOperand2=CAdd\r\n\t\t\t\t{\r\n\t\t\t\t\tOperand1=CAdd\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tOperand1=CMultiply\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tOperand1=CVariableCharacterAttribute\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tCharacter Attribute=Character Attributes/(PE) Perception\r\n\t\t\t\t\t\t\t\tEnforce Value Range Limits=1\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\tOperand2=CConstant\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tConstant Value=2\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\tOperand2=CMultiply\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tOperand1=CConstant\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tConstant Value=3\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\tOperand2=CAdd\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tOperand1=CVariableCharacterAttribute\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tCharacter Attribute=Character Attributes/(CH) Charisma\r\n\t\t\t\t\t\t\t\t\tEnforce Value Range Limits=1\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\t\tOperand2=CMultiply\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tOperand1=CConstant\r\n\t\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\t\tConstant Value=0.5\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\t\t\tOperand2=CVariableCharacterAttribute\r\n\t\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\t\tCharacter Attribute=Character Attributes/(LK) Luck\r\n\t\t\t\t\t\t\t\t\t\tEnforce Value Range Limits=1\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t\tOperator=\r\n\t\t\t\t\tOperand2=CMultiply\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tOperand1=CAdd\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tOperand1=CAdd\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tOperand1=CVariableSkill\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tSkill=Skills/Thought\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\t\tOperand2=CVariableSkill\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tSkill=Skills/Tribal\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\tOperand2=CVariableSkill\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tSkill=Skills/Divine\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\tOperand2=CDivide\r\n\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\tOperand1=CAdd\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tOperand1=CMultiply\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tOperand1=CConstant\r\n\t\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\t\tConstant Value=2\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\t\t\tOperand2=CVariableCharacterAttribute\r\n\t\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\t\tCharacter Attribute=Character Attributes/(CH) Charisma\r\n\t\t\t\t\t\t\t\t\t\tEnforce Value Range Limits=1\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\t\tOperand2=CVariableCharacterAttribute\r\n\t\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\t\tCharacter Attribute=Character Attributes/(PE) Perception\r\n\t\t\t\t\t\t\t\t\tEnforce Value Range Limits=1\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\tOperator=\r\n\t\t\t\t\t\t\tOperand2=CConstant\r\n\t\t\t\t\t\t\t{\r\n\t\t\t\t\t\t\t\tConstant Value=12\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Derived Character Attributes/Mana Replenishment Rate.DerivedCharacterAttribute",
+      "source_sha256": "ee3cd1255bf4e2dd7852318914b3ef6bd949334b0578efc42946308cf765044e",
+      "result_sha256": "f6e65662c373ee67201c20371570f6df407e80b629cb9683166ecfd4f61581c8",
+      "replacements": [
+        {
+          "old": "\tExpression=CAdd\r\n\t{\r\n\t\tOperand1=CConstant\r\n\t\t{\r\n\t\t\tConstant Value=0.15\r\n\t\t}\r\n\t\tOperator=\r\n\t\tOperand2=CVariableDerivedCharacterAttribute\r\n\t\t{\r\n\t\t\tCharacter Attribute=Derived Character Attributes/Mana Variable Rate within Replenishment\r\n\t\t}\r\n\t}\r\n",
+          "new": "\tExpression=CIfExpression\r\n\t{\r\n\t\tCondition=CIsRace\r\n\t\t{\r\n\t\t\tAcceptable Races=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=1\r\n\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t}\r\n\t\t}\r\n\t\tOperatorPart1=\r\n\t\tValue if True =CConstant\r\n\t\t{\r\n\t\t\tConstant Value=3\r\n\t\t}\r\n\t\tOperatorPart2=\r\n\t\tValue if False=CAdd\r\n\t\t{\r\n\t\t\tOperand1=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=0.15\r\n\t\t\t}\r\n\t\t\tOperator=\r\n\t\t\tOperand2=CVariableDerivedCharacterAttribute\r\n\t\t\t{\r\n\t\t\t\tCharacter Attribute=Derived Character Attributes/Mana Variable Rate within Replenishment\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Levels/Start Game/Dialog/Spirit Elemental Introduction.DialogTree",
+      "source_sha256": "2a4e2beb0e384d017a0f34dfb6d1af44e476de904fdbb1f09f8712679ceed402",
+      "result_sha256": "6ffb71e2c55d545b5e0838bb5bde37e0a6b6a116611b5b1c9485e580a169121e",
+      "replacements": [
+        {
+          "old": "Node ID=3 Conversation Continue\r\nText=They are here. We must escape from this cell. Now.\r\nShould Have Voiceover=0\r\n\r\n",
+          "new": "Node ID=3 Conversation Continue\r\nText=They are here. We must escape from this cell. Now.\r\nShould Have Voiceover=0\r\n\r\nRequirement=!None\r\nCustom Requirement=CAND\r\n{\r\n\tOperand1=CIsRace\r\n\t{\r\n\t\tAcceptable Races=Array\r\n\t\t{\r\n\t\t\tItem Count=1\r\n\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t}\r\n\t}\r\n\tOperator=\r\n\tOperand2=CIsEqualTo\r\n\t{\r\n\t\tOperand1=CVariableDerivedCharacterAttribute\r\n\t\t{\r\n\t\t\tCharacter Attribute=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t}\r\n\t\tOperator=\r\n\t\tOperand2=CConstant\r\n\t\t{\r\n\t\t\tConstant Value=0\r\n\t\t}\r\n\t}\r\n}\r\nReply Text=[Aetherian] Przywoluje moje czakramy swiatla.\r\nGo to node ID=\r\nCustom Action=CMultipleActionsAction\r\n{\r\n\tAction=Array\r\n\t{\r\n\t\tItem Count=3\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dawn Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dusk Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CAddCharacterModifierToCharacterAction\r\n\t\t{\r\n\t\t\tModifier Description=Aetherian starter received\r\n\t\t\tModification is permanent=1\r\n\t\t\tCharacter to modify=$instigator\r\n\t\t\tModifiers=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=1\r\n\t\t\t\tModifier=CCharacterModifierDerivedAttribute\r\n\t\t\t\t{\r\n\t\t\t\t\tModification Amount=CConstant\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tConstant Value=1\r\n\t\t\t\t\t}\r\n\t\t\t\t\tModification amount is a percent=0\r\n\t\t\t\t\tAllow Accumulation=0\r\n\t\t\t\t\tDerived character attribute to modify=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tOPTIONAL Duration=\r\n\t\t\tExpression Context=$instigator\r\n\t\t}\r\n\t}\r\n}\r\n\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Levels/Start Game/Dialog/Spirit Bestial Introduction.DialogTree",
+      "source_sha256": "fd670b94045bdd51462f9773080fa9611b03775b132c95eff896a03ae31fd349",
+      "result_sha256": "87eeb3a8bcfee8055f99d090b39ac6e563c1f96c824f2154ae079a21e1c3be78",
+      "replacements": [
+        {
+          "old": "Node ID=3 Conversation Continue\r\nText=We are being hunted. I can sense them - powerful foes hunt us, and are getting closer. If we stay here, you will be skinned alive - and if you die, I die.\r\nShould Have Voiceover=1\r\n\r\n",
+          "new": "Node ID=3 Conversation Continue\r\nText=We are being hunted. I can sense them - powerful foes hunt us, and are getting closer. If we stay here, you will be skinned alive - and if you die, I die.\r\nShould Have Voiceover=1\r\n\r\nRequirement=!None\r\nCustom Requirement=CAND\r\n{\r\n\tOperand1=CIsRace\r\n\t{\r\n\t\tAcceptable Races=Array\r\n\t\t{\r\n\t\t\tItem Count=1\r\n\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t}\r\n\t}\r\n\tOperator=\r\n\tOperand2=CIsEqualTo\r\n\t{\r\n\t\tOperand1=CVariableDerivedCharacterAttribute\r\n\t\t{\r\n\t\t\tCharacter Attribute=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t}\r\n\t\tOperator=\r\n\t\tOperand2=CConstant\r\n\t\t{\r\n\t\t\tConstant Value=0\r\n\t\t}\r\n\t}\r\n}\r\nReply Text=[Aetherian] Przywoluje moje czakramy swiatla.\r\nGo to node ID=\r\nCustom Action=CMultipleActionsAction\r\n{\r\n\tAction=Array\r\n\t{\r\n\t\tItem Count=3\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dawn Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dusk Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CAddCharacterModifierToCharacterAction\r\n\t\t{\r\n\t\t\tModifier Description=Aetherian starter received\r\n\t\t\tModification is permanent=1\r\n\t\t\tCharacter to modify=$instigator\r\n\t\t\tModifiers=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=1\r\n\t\t\t\tModifier=CCharacterModifierDerivedAttribute\r\n\t\t\t\t{\r\n\t\t\t\t\tModification Amount=CConstant\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tConstant Value=1\r\n\t\t\t\t\t}\r\n\t\t\t\t\tModification amount is a percent=0\r\n\t\t\t\t\tAllow Accumulation=0\r\n\t\t\t\t\tDerived character attribute to modify=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tOPTIONAL Duration=\r\n\t\t\tExpression Context=$instigator\r\n\t\t}\r\n\t}\r\n}\r\n\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Levels/Start Game/Dialog/Spirit Demonic Introduction.DialogTree",
+      "source_sha256": "a5eac503013375099d9a7a94bb41626d670229c2d55d306843360a5c0f564042",
+      "result_sha256": "08eb9cc7a7166f5efff0cff731f520f5d7ffda43d5291f6111585f4dd11ac823",
+      "replacements": [
+        {
+          "old": "Node ID=3 Conversation Continue\r\nText=The problem is, someone else already knows who you are, too, and they're not as warm and loving as I am. So, and try to keep up with me on this, hmm? If we stay here much longer you'll have a glorious future as a corpse...granted, at least I will survive, but there's a chance I might feel some of your pain when they kill you, and I can't have that.  \r\nShould Have Voiceover=1\r\n\r\n",
+          "new": "Node ID=3 Conversation Continue\r\nText=The problem is, someone else already knows who you are, too, and they're not as warm and loving as I am. So, and try to keep up with me on this, hmm? If we stay here much longer you'll have a glorious future as a corpse...granted, at least I will survive, but there's a chance I might feel some of your pain when they kill you, and I can't have that.  \r\nShould Have Voiceover=1\r\n\r\nRequirement=!None\r\nCustom Requirement=CAND\r\n{\r\n\tOperand1=CIsRace\r\n\t{\r\n\t\tAcceptable Races=Array\r\n\t\t{\r\n\t\t\tItem Count=1\r\n\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t}\r\n\t}\r\n\tOperator=\r\n\tOperand2=CIsEqualTo\r\n\t{\r\n\t\tOperand1=CVariableDerivedCharacterAttribute\r\n\t\t{\r\n\t\t\tCharacter Attribute=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t}\r\n\t\tOperator=\r\n\t\tOperand2=CConstant\r\n\t\t{\r\n\t\t\tConstant Value=0\r\n\t\t}\r\n\t}\r\n}\r\nReply Text=[Aetherian] Przywoluje moje czakramy swiatla.\r\nGo to node ID=\r\nCustom Action=CMultipleActionsAction\r\n{\r\n\tAction=Array\r\n\t{\r\n\t\tItem Count=3\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dawn Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dusk Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CAddCharacterModifierToCharacterAction\r\n\t\t{\r\n\t\t\tModifier Description=Aetherian starter received\r\n\t\t\tModification is permanent=1\r\n\t\t\tCharacter to modify=$instigator\r\n\t\t\tModifiers=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=1\r\n\t\t\t\tModifier=CCharacterModifierDerivedAttribute\r\n\t\t\t\t{\r\n\t\t\t\t\tModification Amount=CConstant\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tConstant Value=1\r\n\t\t\t\t\t}\r\n\t\t\t\t\tModification amount is a percent=0\r\n\t\t\t\t\tAllow Accumulation=0\r\n\t\t\t\t\tDerived character attribute to modify=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tOPTIONAL Duration=\r\n\t\t\tExpression Context=$instigator\r\n\t\t}\r\n\t}\r\n}\r\n\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Levels/1 Barcelona/Dialog/Gate District/Blacksmith.DialogTree",
+      "source_sha256": "7f9611f23a8565aaa1c507487da04edbd9370b0ff4752c01db75cd4f5d111d9a",
+      "result_sha256": "a426d0eace56581dac75f4f6a3b2f2358e14f7514a02d926b6371685cf9b5672",
+      "replacements": [
+        {
+          "old": "Node ID=01 Introduction Non-tainted Male\r\nText=Buenos dias, senor! Adelante, adelante <Come in, come in> - welcome to Eduardo's Blacksmith Shop. Come to purchase the finest weapons in Barcelona, no? Simple iron to enchanted steel, you will find it all here!\r\nShould Have Voiceover=1\r\n\r\n",
+          "new": "Node ID=01 Introduction Non-tainted Male\r\nText=Buenos dias, senor! Adelante, adelante <Come in, come in> - welcome to Eduardo's Blacksmith Shop. Come to purchase the finest weapons in Barcelona, no? Simple iron to enchanted steel, you will find it all here!\r\nShould Have Voiceover=1\r\n\r\nRequirement=!None\r\nCustom Requirement=CAND\r\n{\r\n\tOperand1=CIsRace\r\n\t{\r\n\t\tAcceptable Races=Array\r\n\t\t{\r\n\t\t\tItem Count=1\r\n\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t}\r\n\t}\r\n\tOperator=\r\n\tOperand2=CIsEqualTo\r\n\t{\r\n\t\tOperand1=CVariableDerivedCharacterAttribute\r\n\t\t{\r\n\t\t\tCharacter Attribute=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t}\r\n\t\tOperator=\r\n\t\tOperand2=CConstant\r\n\t\t{\r\n\t\t\tConstant Value=0\r\n\t\t}\r\n\t}\r\n}\r\nReply Text=[Aetherian] Przywoluje moje czakramy swiatla.\r\nGo to node ID=\r\nCustom Action=CMultipleActionsAction\r\n{\r\n\tAction=Array\r\n\t{\r\n\t\tItem Count=3\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dawn Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dusk Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CAddCharacterModifierToCharacterAction\r\n\t\t{\r\n\t\t\tModifier Description=Aetherian starter received\r\n\t\t\tModification is permanent=1\r\n\t\t\tCharacter to modify=$instigator\r\n\t\t\tModifiers=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=1\r\n\t\t\t\tModifier=CCharacterModifierDerivedAttribute\r\n\t\t\t\t{\r\n\t\t\t\t\tModification Amount=CConstant\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tConstant Value=1\r\n\t\t\t\t\t}\r\n\t\t\t\t\tModification amount is a percent=0\r\n\t\t\t\t\tAllow Accumulation=0\r\n\t\t\t\t\tDerived character attribute to modify=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tOPTIONAL Duration=\r\n\t\t\tExpression Context=$instigator\r\n\t\t}\r\n\t}\r\n}\r\n\r\n",
+          "count": 1
+        },
+        {
+          "old": "Node ID=01 Introduction, Non-Tainted Female\r\nText=Buenos dias, senorita! Adelante, adelante <Come in, come in> - welcome to Eduardo's Blacksmith Shop. Come to purchase the finest weapons in Barcelona, no? Simple iron to enchanted steel, you will find it all here!\r\nShould Have Voiceover=1\r\n\r\n",
+          "new": "Node ID=01 Introduction, Non-Tainted Female\r\nText=Buenos dias, senorita! Adelante, adelante <Come in, come in> - welcome to Eduardo's Blacksmith Shop. Come to purchase the finest weapons in Barcelona, no? Simple iron to enchanted steel, you will find it all here!\r\nShould Have Voiceover=1\r\n\r\nRequirement=!None\r\nCustom Requirement=CAND\r\n{\r\n\tOperand1=CIsRace\r\n\t{\r\n\t\tAcceptable Races=Array\r\n\t\t{\r\n\t\t\tItem Count=1\r\n\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t}\r\n\t}\r\n\tOperator=\r\n\tOperand2=CIsEqualTo\r\n\t{\r\n\t\tOperand1=CVariableDerivedCharacterAttribute\r\n\t\t{\r\n\t\t\tCharacter Attribute=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t}\r\n\t\tOperator=\r\n\t\tOperand2=CConstant\r\n\t\t{\r\n\t\t\tConstant Value=0\r\n\t\t}\r\n\t}\r\n}\r\nReply Text=[Aetherian] Przywoluje moje czakramy swiatla.\r\nGo to node ID=\r\nCustom Action=CMultipleActionsAction\r\n{\r\n\tAction=Array\r\n\t{\r\n\t\tItem Count=3\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dawn Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dusk Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CAddCharacterModifierToCharacterAction\r\n\t\t{\r\n\t\t\tModifier Description=Aetherian starter received\r\n\t\t\tModification is permanent=1\r\n\t\t\tCharacter to modify=$instigator\r\n\t\t\tModifiers=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=1\r\n\t\t\t\tModifier=CCharacterModifierDerivedAttribute\r\n\t\t\t\t{\r\n\t\t\t\t\tModification Amount=CConstant\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tConstant Value=1\r\n\t\t\t\t\t}\r\n\t\t\t\t\tModification amount is a percent=0\r\n\t\t\t\t\tAllow Accumulation=0\r\n\t\t\t\t\tDerived character attribute to modify=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tOPTIONAL Duration=\r\n\t\t\tExpression Context=$instigator\r\n\t\t}\r\n\t}\r\n}\r\n\r\n",
+          "count": 1
+        },
+        {
+          "old": "Node ID=01 Introduction, Sylvant\r\nText=Ah...are you one of those touched by nature, my friend? No matter. Do not let it be said that I ever turn away a paying customer - welcome to Eduardo's Blacksmith Shop. Come to purchase the finest weapons in Barcelona, no? Simple iron to enchanted steel, you will find it all here!\r\nShould Have Voiceover=1\r\n\r\n",
+          "new": "Node ID=01 Introduction, Sylvant\r\nText=Ah...are you one of those touched by nature, my friend? No matter. Do not let it be said that I ever turn away a paying customer - welcome to Eduardo's Blacksmith Shop. Come to purchase the finest weapons in Barcelona, no? Simple iron to enchanted steel, you will find it all here!\r\nShould Have Voiceover=1\r\n\r\nRequirement=!None\r\nCustom Requirement=CAND\r\n{\r\n\tOperand1=CIsRace\r\n\t{\r\n\t\tAcceptable Races=Array\r\n\t\t{\r\n\t\t\tItem Count=1\r\n\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t}\r\n\t}\r\n\tOperator=\r\n\tOperand2=CIsEqualTo\r\n\t{\r\n\t\tOperand1=CVariableDerivedCharacterAttribute\r\n\t\t{\r\n\t\t\tCharacter Attribute=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t}\r\n\t\tOperator=\r\n\t\tOperand2=CConstant\r\n\t\t{\r\n\t\t\tConstant Value=0\r\n\t\t}\r\n\t}\r\n}\r\nReply Text=[Aetherian] Przywoluje moje czakramy swiatla.\r\nGo to node ID=\r\nCustom Action=CMultipleActionsAction\r\n{\r\n\tAction=Array\r\n\t{\r\n\t\tItem Count=3\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dawn Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dusk Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CAddCharacterModifierToCharacterAction\r\n\t\t{\r\n\t\t\tModifier Description=Aetherian starter received\r\n\t\t\tModification is permanent=1\r\n\t\t\tCharacter to modify=$instigator\r\n\t\t\tModifiers=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=1\r\n\t\t\t\tModifier=CCharacterModifierDerivedAttribute\r\n\t\t\t\t{\r\n\t\t\t\t\tModification Amount=CConstant\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tConstant Value=1\r\n\t\t\t\t\t}\r\n\t\t\t\t\tModification amount is a percent=0\r\n\t\t\t\t\tAllow Accumulation=0\r\n\t\t\t\t\tDerived character attribute to modify=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tOPTIONAL Duration=\r\n\t\t\tExpression Context=$instigator\r\n\t\t}\r\n\t}\r\n}\r\n\r\n",
+          "count": 1
+        },
+        {
+          "old": "Node ID=01 Introduction, Feralkin\r\nText=Ah...a long way from the forests, aren't you, my big friend? No matter. Do not let it be said that I ever turn away a paying customer - welcome to Eduardo's Blacksmith Shop. Come to purchase the finest weapons in Barcelona, no? Simple iron to enchanted steel, you will find it all here!\r\nShould Have Voiceover=1\r\n\r\n",
+          "new": "Node ID=01 Introduction, Feralkin\r\nText=Ah...a long way from the forests, aren't you, my big friend? No matter. Do not let it be said that I ever turn away a paying customer - welcome to Eduardo's Blacksmith Shop. Come to purchase the finest weapons in Barcelona, no? Simple iron to enchanted steel, you will find it all here!\r\nShould Have Voiceover=1\r\n\r\nRequirement=!None\r\nCustom Requirement=CAND\r\n{\r\n\tOperand1=CIsRace\r\n\t{\r\n\t\tAcceptable Races=Array\r\n\t\t{\r\n\t\t\tItem Count=1\r\n\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t}\r\n\t}\r\n\tOperator=\r\n\tOperand2=CIsEqualTo\r\n\t{\r\n\t\tOperand1=CVariableDerivedCharacterAttribute\r\n\t\t{\r\n\t\t\tCharacter Attribute=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t}\r\n\t\tOperator=\r\n\t\tOperand2=CConstant\r\n\t\t{\r\n\t\t\tConstant Value=0\r\n\t\t}\r\n\t}\r\n}\r\nReply Text=[Aetherian] Przywoluje moje czakramy swiatla.\r\nGo to node ID=\r\nCustom Action=CMultipleActionsAction\r\n{\r\n\tAction=Array\r\n\t{\r\n\t\tItem Count=3\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dawn Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dusk Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CAddCharacterModifierToCharacterAction\r\n\t\t{\r\n\t\t\tModifier Description=Aetherian starter received\r\n\t\t\tModification is permanent=1\r\n\t\t\tCharacter to modify=$instigator\r\n\t\t\tModifiers=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=1\r\n\t\t\t\tModifier=CCharacterModifierDerivedAttribute\r\n\t\t\t\t{\r\n\t\t\t\t\tModification Amount=CConstant\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tConstant Value=1\r\n\t\t\t\t\t}\r\n\t\t\t\t\tModification amount is a percent=0\r\n\t\t\t\t\tAllow Accumulation=0\r\n\t\t\t\t\tDerived character attribute to modify=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tOPTIONAL Duration=\r\n\t\t\tExpression Context=$instigator\r\n\t\t}\r\n\t}\r\n}\r\n\r\n",
+          "count": 1
+        },
+        {
+          "old": "Node ID=01 Introduction, Tainted Demokin\r\nText=Eh...welcome to Eduardo's Blacksmith Shop. If you are looking for iron and, eh, enchanted steel, you have come to the right place.\r\nShould Have Voiceover=1\r\n\r\n",
+          "new": "Node ID=01 Introduction, Tainted Demokin\r\nText=Eh...welcome to Eduardo's Blacksmith Shop. If you are looking for iron and, eh, enchanted steel, you have come to the right place.\r\nShould Have Voiceover=1\r\n\r\nRequirement=!None\r\nCustom Requirement=CAND\r\n{\r\n\tOperand1=CIsRace\r\n\t{\r\n\t\tAcceptable Races=Array\r\n\t\t{\r\n\t\t\tItem Count=1\r\n\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t}\r\n\t}\r\n\tOperator=\r\n\tOperand2=CIsEqualTo\r\n\t{\r\n\t\tOperand1=CVariableDerivedCharacterAttribute\r\n\t\t{\r\n\t\t\tCharacter Attribute=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t}\r\n\t\tOperator=\r\n\t\tOperand2=CConstant\r\n\t\t{\r\n\t\t\tConstant Value=0\r\n\t\t}\r\n\t}\r\n}\r\nReply Text=[Aetherian] Przywoluje moje czakramy swiatla.\r\nGo to node ID=\r\nCustom Action=CMultipleActionsAction\r\n{\r\n\tAction=Array\r\n\t{\r\n\t\tItem Count=3\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dawn Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dusk Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CAddCharacterModifierToCharacterAction\r\n\t\t{\r\n\t\t\tModifier Description=Aetherian starter received\r\n\t\t\tModification is permanent=1\r\n\t\t\tCharacter to modify=$instigator\r\n\t\t\tModifiers=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=1\r\n\t\t\t\tModifier=CCharacterModifierDerivedAttribute\r\n\t\t\t\t{\r\n\t\t\t\t\tModification Amount=CConstant\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tConstant Value=1\r\n\t\t\t\t\t}\r\n\t\t\t\t\tModification amount is a percent=0\r\n\t\t\t\t\tAllow Accumulation=0\r\n\t\t\t\t\tDerived character attribute to modify=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tOPTIONAL Duration=\r\n\t\t\tExpression Context=$instigator\r\n\t\t}\r\n\t}\r\n}\r\n\r\n",
+          "count": 1
+        },
+        {
+          "old": "Node ID=03 Return Dialogue 1 Normal\r\nText=Welcome back to Eduardo's Blacksmith Shop. Come to see what weapons and armor I have that might interest you, no?\r\nShould Have Voiceover=1\r\n\r\n",
+          "new": "Node ID=03 Return Dialogue 1 Normal\r\nText=Welcome back to Eduardo's Blacksmith Shop. Come to see what weapons and armor I have that might interest you, no?\r\nShould Have Voiceover=1\r\n\r\nRequirement=!None\r\nCustom Requirement=CAND\r\n{\r\n\tOperand1=CIsRace\r\n\t{\r\n\t\tAcceptable Races=Array\r\n\t\t{\r\n\t\t\tItem Count=1\r\n\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t}\r\n\t}\r\n\tOperator=\r\n\tOperand2=CIsEqualTo\r\n\t{\r\n\t\tOperand1=CVariableDerivedCharacterAttribute\r\n\t\t{\r\n\t\t\tCharacter Attribute=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t}\r\n\t\tOperator=\r\n\t\tOperand2=CConstant\r\n\t\t{\r\n\t\t\tConstant Value=0\r\n\t\t}\r\n\t}\r\n}\r\nReply Text=[Aetherian] Przywoluje moje czakramy swiatla.\r\nGo to node ID=\r\nCustom Action=CMultipleActionsAction\r\n{\r\n\tAction=Array\r\n\t{\r\n\t\tItem Count=3\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dawn Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CActionGiveStandardInventoryItem\r\n\t\t{\r\n\t\t\tWho to give to=$instigator\r\n\t\t\tDelete Trigger=0\r\n\t\t\tNotify Player=1\r\n\t\t\tInventory Item To Give=Inventory Items/Aetherian/Dusk Chakram\r\n\t\t\tAdditions to add=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=0\r\n\t\t\t}\r\n\t\t}\r\n\t\tAction=CAddCharacterModifierToCharacterAction\r\n\t\t{\r\n\t\t\tModifier Description=Aetherian starter received\r\n\t\t\tModification is permanent=1\r\n\t\t\tCharacter to modify=$instigator\r\n\t\t\tModifiers=Array\r\n\t\t\t{\r\n\t\t\t\tItem Count=1\r\n\t\t\t\tModifier=CCharacterModifierDerivedAttribute\r\n\t\t\t\t{\r\n\t\t\t\t\tModification Amount=CConstant\r\n\t\t\t\t\t{\r\n\t\t\t\t\t\tConstant Value=1\r\n\t\t\t\t\t}\r\n\t\t\t\t\tModification amount is a percent=0\r\n\t\t\t\t\tAllow Accumulation=0\r\n\t\t\t\t\tDerived character attribute to modify=Derived Character Attributes/Aetherian/Starter Received\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t\tOPTIONAL Duration=\r\n\t\t\tExpression Context=$instigator\r\n\t\t}\r\n\t}\r\n}\r\n\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Fake Wand Spells/Poison Touch.Skill",
+      "source_sha256": "3cb817a5e94d82099b7379a02eff7e1151883f71e90d4df5eb61b25b2e172e43",
+      "result_sha256": "1e6fa1d0f76485e9d402bfa9c04f19d7f262f0e53f8d2cce5c85e3257756bb05",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CIsEqualTo\r\n\t\t{\r\n\t\t\tOperand1=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=0\r\n\t\t\t}\r\n\t\t\tOperator=\r\n\t\t\tOperand2=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=1\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=2\r\n\t\tRequirements=CIsEqualTo\r\n\t\t{\r\n\t\t\tOperand1=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=0\r\n\t\t\t}\r\n\t\t\tOperator=\r\n\t\t\tOperand2=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=1\r\n\t\t\t}\r\n\t\t}\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Fake Wand Spells/Rigor Mortis.Skill",
+      "source_sha256": "14a790d1e854b7df5b02a085d204dfd9772cba3483fd291587ee585c40852bc5",
+      "result_sha256": "e0e766f3ed2159e855294953af0236ce120e764c984c7054f7e8e50ae349df09",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CIsEqualTo\r\n\t\t{\r\n\t\t\tOperand1=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=0\r\n\t\t\t}\r\n\t\t\tOperator=\r\n\t\t\tOperand2=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=1\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=2\r\n\t\tRequirements=CIsEqualTo\r\n\t\t{\r\n\t\t\tOperand1=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=0\r\n\t\t\t}\r\n\t\t\tOperator=\r\n\t\t\tOperand2=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=1\r\n\t\t\t}\r\n\t\t}\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Fake Wand Spells/Secret Reveal.Skill",
+      "source_sha256": "cd0d9c1b4ec2d6235bbd94e43449230190f9e1b8d267b60568c5b97cb6b7ee81",
+      "result_sha256": "c0f02914661b75b0a5b900f4cbce55f7d94323e48a25e303fadfb04757ba7cc8",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CIsEqualTo\r\n\t\t{\r\n\t\t\tOperand1=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=0\r\n\t\t\t}\r\n\t\t\tOperator=\r\n\t\t\tOperand2=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=1\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=2\r\n\t\tRequirements=CIsEqualTo\r\n\t\t{\r\n\t\t\tOperand1=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=0\r\n\t\t\t}\r\n\t\t\tOperator=\r\n\t\t\tOperand2=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=1\r\n\t\t\t}\r\n\t\t}\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Defensive/Aid.Skill",
+      "source_sha256": "d3078817ea21dbb390b8c1a50eabd26d9f92e95aa275695f834863b59779fee5",
+      "result_sha256": "a19d2db80e826f582bb4c3ec5bf21011e9e2af7da2f1e0b0543fb1a9c3de9f4c",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Defensive/Divine Assistance.Skill",
+      "source_sha256": "3df587adba7322bd292b25ad58a9124c01a3498e8ee2783dee2dd70b09dd8ee2",
+      "result_sha256": "1d402b97929489797d3c9a150d83a9fb38da88835200a2305def3b5cf067b107",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Defensive/Divine Strength.Skill",
+      "source_sha256": "35d51ea8a2df88669ee67f3d3d7dbcf61d0f889dd2255217c893cee8520fc6e9",
+      "result_sha256": "2a8db368e5641af7072c1a3a7aa9ca0784fc065df53ebe30a15de6c30953dbe4",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Defensive/Greater Resistance.Skill",
+      "source_sha256": "0521b17cb87866d190bfff7889e907058c5bae72b57494ae1c75df5d041f0f70",
+      "result_sha256": "8a10ae7497f71168edecd1047dd8c6a0aa73cad3f40a6c58daa60d2ef517208d",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Defensive/Greater Sight.Skill",
+      "source_sha256": "fb69590746326a31b3c6314a8b022bc9a65561f3468d62c4609ba379889429f0",
+      "result_sha256": "345e9accfafee0bf70600a688bec0ecc67e0b75b7db07695de7505d20cd7de6e",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Defensive/Healing.Skill",
+      "source_sha256": "bf43fea3b965446b7b09826906daca30e7b7fac396c70ee4941bced7c4b416b5",
+      "result_sha256": "3488d792902cda327d029310b0de3e95ab827992384573918b5c60a61b6f2196",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Defensive/Holy Fire.Skill",
+      "source_sha256": "477a4687c9ee994beb95bef75c04bb6cf98e6ac5d580e4e7742988922c6f79f7",
+      "result_sha256": "aee07129df2920e833dc51f2bd26f90d037f81aab3164841572b2e4496f3fe49",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Defensive/Mana Shield.Skill",
+      "source_sha256": "b5fa284f72ca611874df3149e59cbff583dd815f8fa52b4827c2d73659d80220",
+      "result_sha256": "88def741cc1226308220e93083322863f982f8a95a707bed84e8c0647413ddc4",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Defensive/Physical Aura.Skill",
+      "source_sha256": "ddb493848c2dd7801a65adf684354f2963ca0767491bf58e3e6ffb27bdb089f8",
+      "result_sha256": "0e0a0d49904b43cde3c5c173343493c427bd9a5f98476487c43f44f0b44fdb6d",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Defensive/Resist Fire.Skill",
+      "source_sha256": "5972c4fbefe8210d2e062d561680beea2795af0b3eacfcd339502a85a63f3f2d",
+      "result_sha256": "8cc638edca78aad0931fbf645d6ebfe23d3429a898519fd9097d4b3455de8033",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Defensive/Resist Poison.Skill",
+      "source_sha256": "cb09556aab7b52bd2de15cdc9c76c11452ed6f35d82b0758b3e4f119a08e6219",
+      "result_sha256": "417914e3a450a59b1c52909b2032263676f83e9b1923b5fbae2b22be81b07fca",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Defensive/Turn Undead.Skill",
+      "source_sha256": "5b5e0a6d29ee6731ab16d7702a04d953a285eeeb97ec6e43df6094bcfced1cf9",
+      "result_sha256": "126db78b208c2961c815bbae4145b7c8bcfdaa4c0ac3a54d68bcfaaabba89cec",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Offensive/Blessed Aim.Skill",
+      "source_sha256": "be29b848e1a6a400049be62ca9d6d246bd18b9182fb31781c55d73af4eed2542",
+      "result_sha256": "2a80aab5879db548a54082b0fa33368c6c4ca886d83ef9afab5492545472e32d",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Offensive/Celestial Smite.Skill",
+      "source_sha256": "af4ad3abc9ca49b18aee2f2ed1697f5b2d117ed65f5aae611d46e4a1fc4e7343",
+      "result_sha256": "926d9928af908e1ceffd76924249e61e7fcced0bfd1916e856ab118771f0863a",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Offensive/Cripple Enemies.Skill",
+      "source_sha256": "cc996e1ee30b91399905ea86585f4a21b5042d9a3b300edbfd8b2dad6c03bdb1",
+      "result_sha256": "abeebdcfb6152f6c5a18bba331352ccaaa7e23e30dd1601ad71e1362547f2717",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Offensive/Divine Might.Skill",
+      "source_sha256": "291cb0088f3cdc3f92f837e275eca59cef57da81f7441a5efffea6ce2f7d2068",
+      "result_sha256": "bebedd542fc66c235ffc9bbbaf89ab1de03fb438b1dacf8ba908b71c51dd8702",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Offensive/Exorcise.Skill",
+      "source_sha256": "7b4cfb3cec3a6e182b712911a90f069fe9e1980b4ec024929b652a51ed38144b",
+      "result_sha256": "3112a704a19ea57ae9383ce28c2baaa6b0d551e3bc2bf7d3aafdab05920a72ed",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Offensive/Spiritual Knight.Skill",
+      "source_sha256": "8a93853bba80caf920ba460602e40e964d8937e5d29e188e5359a9d5eecc635b",
+      "result_sha256": "21f064d7e8c6bf982bd88c408b75ff5e0e372add8bd4c921c114689b939339f3",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Divine/Offensive/Weaken Enemies.Skill",
+      "source_sha256": "c8d1474f55cd7dcb02f032aea4512e28a9f4160def35a7d7990d140d35c89468",
+      "result_sha256": "872a22eb34bae4ce2b52462a9b178d6b87313afc50fa32b9cb67cc4c47ea14fd",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Defensive/Cold Ground.Skill",
+      "source_sha256": "34077ca8218797172b6d266e325daf9d8cc94fa08e035dcc03238ffa901defed",
+      "result_sha256": "05369dd701e5ddd77ad4b8179701c1ab129ea27b576e3c697be6d15f569c1a73",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Defensive/ENEMY Magical Shield.Skill",
+      "source_sha256": "cf2601922b8ef03dfd233a58c1bc61f3065fd1507ca0e7faadbbf76920cfb0a0",
+      "result_sha256": "a40fd946f5b0fdb19c050ffb2cc21c71ddc63d3e478374192ca9b7524917373a",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CIsEqualTo\r\n\t\t{\r\n\t\t\tOperand1=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=0\r\n\t\t\t}\r\n\t\t\tOperator=\r\n\t\t\tOperand2=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=1\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=2\r\n\t\tRequirements=CIsEqualTo\r\n\t\t{\r\n\t\t\tOperand1=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=0\r\n\t\t\t}\r\n\t\t\tOperator=\r\n\t\t\tOperand2=CConstant\r\n\t\t\t{\r\n\t\t\t\tConstant Value=1\r\n\t\t\t}\r\n\t\t}\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Defensive/Fire Ground.Skill",
+      "source_sha256": "9516de8f7389dbb1f892f033ef438e860e1c2e53e633f91cd57e7f871bb0383d",
+      "result_sha256": "dfbc11fbb43e177eb18ce40749ae61ddf353ba91365a0bb5eab4cca87a167e04",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Defensive/Magical Shield.Skill",
+      "source_sha256": "3a9bce9e041aade6c81a09cea6192888262f5aabb8982b38ae034a41defdf1c6",
+      "result_sha256": "93f6553ac8195a5cfec0ccda1c895c94f07496f73ea911edc9420f5add396c56",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Defensive/Mana Shield.Skill",
+      "source_sha256": "9bc4ae243d67fa502b0f5e1f2dff40996e4687066f99e9a92239a64d2015b927",
+      "result_sha256": "47d2c4d6c7aaad3cf2a1733260fe8a11c2f740abb3e4f4a6b6b1091aa9de4049",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Electrical Burst.Skill",
+      "source_sha256": "af5e72e56fbec4f4987e51ba8ea793c841131cb3ea6a26e45f5d648c53dfc3db",
+      "result_sha256": "5da2c210dde9e4844573583b0d58afa0728f5d8e37cb4e2123f0b456edf3f560",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Fire Circle.Skill",
+      "source_sha256": "e948cad19f6632fc27424c93eb3a520d7e87e8ddaf1b4ed1ff8e51ba245cee7a",
+      "result_sha256": "bec7b9b4a161bd5ca1a4ca875b8549b0430db19caa0273fa0b06b989539331d3",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Fire Orb.Skill",
+      "source_sha256": "f61ce2abb611d82dc796e55a6882df4183743048c1f2dd7726138f419d29b6cd",
+      "result_sha256": "df9c57355be7c39e90574078134f09223743c01b15bd7ae57c10c763c0cde75d",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Fireball.Skill",
+      "source_sha256": "bcd9dc907acbd1e6a0d92fbf36bc7b0cab64f84cefe60d5ac770dba0b64a509a",
+      "result_sha256": "1ce41cfa97cedacb665fb52c812368fbf481509cb2a141f1d4b3b001f88d33ab",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Flame Thrower.Skill",
+      "source_sha256": "1afbe89199fcb98f12d3a418985d5fa40445204fb7d5491c627e47e996f8a19d",
+      "result_sha256": "8b19baac8c5d4d1c91595ceca031650cd5a96000e43bc90b3b75f29cffacac9f",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Ice Javelin.Skill",
+      "source_sha256": "32bbad45a88d25c405f67ec86b9006e01368d6f0db1696612b2d33ec1426d8d8",
+      "result_sha256": "deb4602f788a658121f248e775be5426b716ac3fe8515b7eb839bcedc3dc1a00",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Ice Missile.Skill",
+      "source_sha256": "595f088fdbbf90aecd55b2b15dc0ca7cd7356ef701ba75733ff5c15ccd52b32c",
+      "result_sha256": "9df512b2808bd9b3970dc055b69ac2ca84107a824b94d98fc1370190be1b5eb6",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Ice Ring.Skill",
+      "source_sha256": "9c7c3fb59620716d0f16f3787d6b94632d59e4d85a76dcdfb497f92e52077bd5",
+      "result_sha256": "a6c914f7d9a686ab7f53149e70abdf4da39fb8702e437687db22c419365959a4",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Ice Storm.Skill",
+      "source_sha256": "9c64149ba0c64f44e677e6c48aa9462a85ec3070fca447bc9fbdf6708cfb0d17",
+      "result_sha256": "5561cfeb7a6b0a54458da5af21fc767717e5d9ab8620d23d5ec04fd519ee113b",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Lightning Bolt.Skill",
+      "source_sha256": "f3ffd4f30c0d447323dddc9520974e35197f33f4d56e77554f8d9dec144e8b2b",
+      "result_sha256": "2745f729f0530332c2d8d704d9d19d825c12cdcfd1d8ce055bf509b60c9095eb",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Lightning Chain.Skill",
+      "source_sha256": "5ba267b991d437aff6c7e188f661c7d5a5377fa8823a45c0c9f8f85870c8b662",
+      "result_sha256": "4c69ee89f3315813e220fac49f7dbdf0cb80edf3c2eff430ab1fc27f4c157d9d",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Lightning Storm.Skill",
+      "source_sha256": "a147872d6a4260228add574da278f9e39d1d7b691c7716e942e88398d3cffe77",
+      "result_sha256": "a41c048218e22adcbde3ebe38dd893f476b441c3b63f20ff5ae8ec881cb3f85f",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Poison Ring.Skill",
+      "source_sha256": "3bcada2496544d97c4d5a2a877d5c2448f6babd2e73917659ddda29be3619ef2",
+      "result_sha256": "a1b6a324e834ac0132ecccad8d7e849b878d1f36e4c6ad77811cbfbc49c5f3c6",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Spike.Skill",
+      "source_sha256": "01f211b5ec47f64843f6326d8a0271d50a75376d33e5d5ab43068f4afea7ba2b",
+      "result_sha256": "e224842ce0261ea25f5eab36a5c9f70895f3c95debd2e85f8f3980f4431c1367",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Thought/Offensive/Static Charge.Skill",
+      "source_sha256": "0b7df09ec99b352edc2719a35915738759d65e810da902d6d3b321806598455d",
+      "result_sha256": "7f68164a12084b18d0069a69883ed19c719c16f348bec55b84806bad00638f23",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Defensive/Animal Grace.Skill",
+      "source_sha256": "e949bbaa9d3dac933c22747f92e59dc25d7676c447568668bb199e9f9c067d54",
+      "result_sha256": "1ed6a4ebee42c3cffdb950ffcdad604f827e4b771ec6f8071b29609d950f977f",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Defensive/Armor of Bones.Skill",
+      "source_sha256": "c9e88b2511fa2e45576b1429320d1ba70a3f61263a43d4afb5ea30d488bac906",
+      "result_sha256": "9a13bf035dfc6e30a7148a8aa684255de3c4150fc19b4fed9f23420c7d60a2b2",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Defensive/Backlash.Skill",
+      "source_sha256": "c9c5fab64ab5adfeae4db4140f80c7736dce5a5afc296d66dfef6f2ec14df173",
+      "result_sha256": "a73cda0a45f0ef1b02c9dd63fb5b69c4b70336a4d4323d5d75d47102f204b31d",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Defensive/Mana Shield.Skill",
+      "source_sha256": "53e7f3184b28834617d03bc890501048b6803cde6eb7f1518e0eee522849d2b7",
+      "result_sha256": "e86ffeb3685d1588e4ad29e249cc69996f19875d0ae2dd3954573fd2e4a11529",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Defensive/Shamans Eye.Skill",
+      "source_sha256": "51b83cc0ae244a272231a0b0bad0188a6a2eb3bd4b30ee6bbf69aa1fe09842f4",
+      "result_sha256": "8c728c0008a1710e4df923206b6e189ea4641b529ba60a9d8576ba3129b9df4f",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Defensive/Shroud Darkness.Skill",
+      "source_sha256": "0229a9af9cadf391fd8026ab0e3ff615b5195849f1cab2e83a4b366e35cb4097",
+      "result_sha256": "dc07914ca58d6b8bf8feae3c8ba5167855582240853f36d3c4faa6b9b312b95e",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Defensive/Undead Energy.Skill",
+      "source_sha256": "3bac344d41938de5d999b5360f0e6188516b1642f0b7d672c3444b09c6b6dc21",
+      "result_sha256": "1c8f9d63d718a3b8a3f286133eb96d615cbf226b2a772c973232cf06fe6121cd",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Offensive/Absorb Spirit.Skill",
+      "source_sha256": "8ad84c7ecc98feb77f2940a9a7c5c19e7161ded8d314aacbc669a37b7aac6da0",
+      "result_sha256": "c4c078c68873c550eabf91c16bc701d7222b60b87e14a9766a65e1169525daf1",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Offensive/Amplify Damage.Skill",
+      "source_sha256": "4408d66865f7a0eaa39ea380bd129372460c693e2363bb49b8547177c3f62f20",
+      "result_sha256": "e9f027ab35b63aeb4f3b78d3df8bcdcb2b763499d204d24e66042f8e9b03bdc6",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Offensive/Charm.Skill",
+      "source_sha256": "b087ef066f8180cb641b1e11a0fb3e08a4e2f759a7d3bbf6bc8086d9f541eb5a",
+      "result_sha256": "1679bab4847c2800263c41f53b8f827bf463093dfa8bed69ea51777f9a05d91e",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Offensive/Corpse Bomb.Skill",
+      "source_sha256": "1ad2154a14c4691970590fd3cfc4ab50b7198f96bce62d3f2b9efaa73145a1a2",
+      "result_sha256": "64ee700ebb00f675165d0fa78d4d1e3fea172906ecfa4c19157ddce5edee8499",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Offensive/Fear.Skill",
+      "source_sha256": "fdc7519ac89dc23a3d9559caa4e8aa8a8806eb650dea4b2aa8e67df0964ba47c",
+      "result_sha256": "87c19dc6e68afcaa5e74449263c32ba13e20ca66c315d6853e15eb54d1371215",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Offensive/Insect Plague.Skill",
+      "source_sha256": "5ae6cc898d0c1ad05f24d30b57a090b3628d01ed5c4fa4c2256a2fb3d16085b6",
+      "result_sha256": "9a15572013f5a443a813b77febe86da674140b28b0b9e3f32347be3dd06b57f4",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Offensive/Monster Summoning.Skill",
+      "source_sha256": "4b7eca04be2bcf32d122f42ad5d9fb4325fdf1c827f7c3220f87b88dc36f41fa",
+      "result_sha256": "03de512d330e6c1c68c368c1bf1f49664c01008ed6d7cd1bf541f0c2d6fb7325",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Offensive/Raise Enemy.Skill",
+      "source_sha256": "7cd137ced2e6755aca268343aee2512794095a7e6ac153819b1c1f2bc040db60",
+      "result_sha256": "979501bae1f65a428ab981cdb29195228872391717ca8244488602ab21dacb06",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Offensive/Raise Undead.Skill",
+      "source_sha256": "b7fc2bc1dda36d183b2b4d2491ccd7d42467f1228034a7ca41e49c1b572a75e0",
+      "result_sha256": "dbf79619e8dc355d7659f22199ee419af4f906e758922200ed186719327e481e",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Offensive/Sleep.Skill",
+      "source_sha256": "70dc8785ef83515e5c45a1344a3caa7c0a0b69c25ec61b35fa39da57a7900a55",
+      "result_sha256": "72f42288c359e3e387ed5879dcaf00b07e9bbe62b913ea0197bdb5da21305962",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Offensive/Slow.Skill",
+      "source_sha256": "b7818be36578484cebc1c9e8cc0513fcbea0203dcae47b55ecd2cef0721d3812",
+      "result_sha256": "8f24cf3a2fece7be69ac1c07e5db83e97fe35514644c524bbcfc1d378f5d3174",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Data/Resources/Skills/Magic Tribal/Offensive/Vampire.Skill",
+      "source_sha256": "69c2230fc420a5cf61563ba05aa9e48a35277e113d130708d01df14a28090485",
+      "result_sha256": "d1b2c3f2c91a379d761c3d5417d84c596f237cb7f4e676f887e22a010b2e757b",
+      "replacements": [
+        {
+          "old": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tDisplay and Cast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        },
+        {
+          "old": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=0\r\n\t}\r\n",
+          "new": "\tCast Requirements=Array\r\n\t{\r\n\t\tItem Count=1\r\n\t\tRequirements=CExpressionNot\r\n\t\t{\r\n\t\t\tOperand1=CIsRace\r\n\t\t\t{\r\n\t\t\t\tAcceptable Races=Array\r\n\t\t\t\t{\r\n\t\t\t\t\tItem Count=1\r\n\t\t\t\t\tAcceptable Race=Races/Aetherian\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "path": "Local.txt",
+      "encoding": "utf-16le",
+      "source_sha256": "712f750cde785e82b43d6896eff57a2fca372f92747c002312c4aeabf7cf9ffb",
+      "result_sha256": "ed34840ef63c7654b24919b3633d15e75d304942c3ba237e3d6212e68be8a0c8",
+      "replacements": [
+        {
+          "old": "op below a qaurter of their maximum, you gain an additional +1 to Agility and Strength.[END]\r\nLOCALIZED: Kiedy zaczyna robi\u0107 si\u0119 naprawd\u0119 nieprzyjemnie i wszystko wydaje si\u0119 by\u0107 stracone, ty dopiero zaczynasz si\u0119 rozgrzewa\u0107. Je\u017celi twoje Punkty Wytrzyma\u0142o\u015bci spadn\u0105 poni\u017cej po\u0142owy ich maksymalnej liczby, to twoja Zr\u0119czno\u015b\u0107 i Si\u0142a wzrastaj\u0105 o 1 punkt. Je\u017celi za\u015b twoje Punkty Wytrzyma\u0142o\u015bci spadn\u0105 poni\u017cej jednej czwartej ich maksymalnej liczby, twoja Zwinno\u015b\u0107 i Si\u0142a wzrastaj\u0105 o kolejny punkt.[END]\r\n",
+          "new": "op below a qaurter of their maximum, you gain an additional +1 to Agility and Strength.[END]\r\nLOCALIZED: Kiedy zaczyna robi\u0107 si\u0119 naprawd\u0119 nieprzyjemnie i wszystko wydaje si\u0119 by\u0107 stracone, ty dopiero zaczynasz si\u0119 rozgrzewa\u0107. Je\u017celi twoje Punkty Wytrzyma\u0142o\u015bci spadn\u0105 poni\u017cej po\u0142owy ich maksymalnej liczby, to twoja Zr\u0119czno\u015b\u0107 i Si\u0142a wzrastaj\u0105 o 1 punkt. Je\u017celi za\u015b twoje Punkty Wytrzyma\u0142o\u015bci spadn\u0105 poni\u017cej jednej czwartej ich maksymalnej liczby, twoja Zwinno\u015b\u0107 i Si\u0142a wzrastaj\u0105 o kolejny punkt.[END]\r\n\r\nENGLISH: Czakram Switu [prototyp][END]\r\nLOCALIZED: Czakram \u015awitu [prototyp][END]\r\n\r\nENGLISH: Czakram Brzasku [druga reka][END]\r\nLOCALIZED: Czakram Brzasku [druga r\u0119ka][END]\r\n\r\nENGLISH: Boski Ogien[END]\r\nLOCALIZED: Boski Ogie\u0144[END]\r\n\r\nENGLISH: Skrzydla Brzasku[END]\r\nLOCALIZED: Skrzyd\u0142a Brzasku[END]\r\n\r\nENGLISH: Aetherian - dyscypliny swiatla[END]\r\nLOCALIZED: Aetherian \u2014 dyscypliny \u015bwiat\u0142a[END]\r\n\r\nENGLISH: [Aetherian] Przywoluje moje czakramy swiatla.[END]\r\nLOCALIZED: [Aetherian] Przywo\u0142uj\u0119 moje czakramy \u015bwiat\u0142a.[END]\r\n\r\nENGLISH: Racial abilities. Energy uses the existing Mana pool in this prototype.[END]\r\nLOCALIZED: Zdolno\u015bci rasowe. Energia korzysta w tym prototypie z istniej\u0105cego paska many.[END]\r\n\r\nENGLISH: 2-5 slashing. Offhand chakram adds 1-3 slashing; Divine Fire adds 2-4 fire. Temporary scimitar mesh.[END]\r\nLOCALIZED: 2\u20135 obra\u017ce\u0144 ci\u0119tych. Drugi czakram dodaje 1\u20133 obra\u017ce\u0144 ci\u0119tych, a Boski Ogie\u0144 2\u20134 obra\u017ce\u0144 od ognia. Tymczasowy model szabli; +10% szybko\u015bci animacji ataku.[END]\r\n\r\nENGLISH: Offhand focus: +1 AC and +1-3 slashing on the Dawn Chakram and Chakram Throw. Temporary shield mesh; no independent offhand animation.[END]\r\nLOCALIZED: Druga r\u0119ka: +1 do klasy pancerza i +1\u20133 obra\u017ce\u0144 ci\u0119tych Czakramem \u015awitu oraz Rzutem Czakramem. Tymczasowy model tarczy; bez osobnej animacji drugiej r\u0119ki.[END]\r\n\r\nENGLISH: 12 Energy; 1.2s recovery. 7-11 slashing, plus offhand and Divine Fire bonuses. Existing luminous ice-ring visual; no return trajectory.[END]\r\nLOCALIZED: 12 energii; odnowienie 1,2 s. 7\u201311 obra\u017ce\u0144 ci\u0119tych oraz premie drugiego czakramu i Boskiego Ognia. Zast\u0119pczy efekt \u015bwietlistego lodowego pier\u015bcienia; bez lotu powrotnego.[END]\r\n\r\nENGLISH: 20 Energy; 12s recovery. For 12 seconds, Dawn Chakram and Chakram Throw deal +2-4 fire damage. Does not stack.[END]\r\nLOCALIZED: 20 energii; odnowienie 12 s. Przez 12 s Czakram \u015awitu i Rzut Czakramem zadaj\u0105 dodatkowe 2\u20134 obra\u017ce\u0144 od ognia. Efekt nie kumuluje si\u0119.[END]\r\n\r\nENGLISH: 25 Energy; 20s recovery. For 6 seconds, +15% movement speed and +5 AC. No flight; wings are not yet integrated.[END]\r\nLOCALIZED: 25 energii; odnowienie 20 s. Przez 6 s: +15% szybko\u015bci ruchu i +5 do klasy pancerza. Bez latania; model skrzyde\u0142 nie jest jeszcze zintegrowany.[END]\r\n\r\nENGLISH: Aetherians are lesser celestial beings. Prototype: choose Female; the current appearance uses the human model. Light chakrams and three racial abilities use a shared 100-point Energy pool (the engine still calls it Mana), regenerating 3 per second.[END]\r\nLOCALIZED: Aetherianie to pomniejsze istoty niebia\u0144skie. Prototyp: wybierz p\u0142e\u0107 \u017ce\u0144sk\u0105; obecnie u\u017cywany jest model cz\u0142owieka. Czakramy i trzy zdolno\u015bci rasowe korzystaj\u0105 ze wsp\u00f3lnej puli 100 energii (silnik nadal nazywa j\u0105 man\u0105), odnawianej po 3 na sekund\u0119.[END]\r\n",
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

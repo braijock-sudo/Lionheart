@@ -1,0 +1,114 @@
+CSkillDescription
+{
+	PlugIn Behaviors=Array
+	{
+		Item Count=4
+		PlugIn Behavior=CPlugInBehaviorSpell
+		{
+			ManaUse=CConstant
+			{
+				Constant Value=12
+			}
+			Duration=CConstant
+			{
+				Constant Value=1.2
+			}
+			Automatically disable recasting of spell for duration=1
+			Maximum Range=CConstant
+			{
+				Constant Value=700
+			}
+		}
+		PlugIn Behavior=CXRPGPlugInBehaviorLauncher
+		{
+			After Launch Action=
+			Num To Launch=1
+			Dispersion Angle=0
+			Aim At Parents Target=1
+			Launch Offset=0.000000,0.000000
+			Parents Bone Launch Location=Bip01 R Hand
+			Direction From Bone X=0
+			Direction From Bone Y=0
+			Direction From Bone Z=0
+			Requires Line Of Sight=1
+			Primary Launchable Slot=Character Slot Types/!None
+			Secondary Launchable Types=Array
+			{
+				Item Count=1
+				Secondary Launchable Type=Spell Projectiles/Aetherian/Light Chakram
+			}
+			Damages=Array
+			{
+				Item Count=0
+			}
+		}
+		PlugIn Behavior=CPlugInBehaviorPlaySequence
+		{
+			Granny Animations=Array
+			{
+				Item Count=0
+			}
+			Sequence Name=SpellCast
+			Random Sequence Selection=0
+			Sequence Index=-1
+		}
+		PlugIn Behavior=CPlugInBehaviorAttack
+		{
+			Max Attack Range=700
+			Is Location Based=0
+			Can Use Slayer Mode=0
+			Can Use Sniper Mode=0
+			Action On Hit=
+			Action On Miss=
+		}
+	}
+	Display Name=Rzut Czakramem
+	Parent Display Template=
+	Description=12 Energy; 1.2s recovery. 7-11 slashing, plus offhand and Divine Fire bonuses. Existing luminous ice-ring visual; no return trajectory.
+	Character Creation Screen Description=12 Energy; 1.2s recovery. 7-11 slashing, plus offhand and Divine Fire bonuses. Existing luminous ice-ring visual; no return trajectory.
+	Expressions=CNamedExpressionsArray
+	{
+		Expressions=Array
+		{
+			Array Count=0
+		}
+	}
+	Parent Skill=Skills/Aetherian
+	Value Type=Normal
+	Value Differential=0
+	Can be selected as Tag Skill=0
+	Image=Skills/Magic Thought/Offensive/Ice Missile
+	Amount To Increase Value By With Each Upgrade=0
+	Minimum Value=1
+	Maximum Value=1
+	Sort Priority=1
+	Initial Value=CConstant
+	{
+		Constant Value=1
+	}
+	Initial Minimum & Maximum=1.000000,1.000000
+	Display and Cast Requirements=Array
+	{
+		Item Count=1
+		Requirements=CIsRace
+		{
+			Acceptable Races=Array
+			{
+				Item Count=1
+				Acceptable Race=Races/Aetherian
+			}
+		}
+	}
+	Cast Requirements=Array
+	{
+		Item Count=1
+		Requirements=CIsRace
+		{
+			Acceptable Races=Array
+			{
+				Item Count=1
+				Acceptable Race=Races/Aetherian
+			}
+		}
+	}
+}

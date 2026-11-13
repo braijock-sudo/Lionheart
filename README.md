@@ -4,7 +4,7 @@ Eksperymentalny prototyp 0.1 dla Lionheart: Legacy of the Crusader.
 
 ## Pobieranie
 
-Paczka ZIP jest przygotowana. Link do pobrania pojawi się po potwierdzeniu jej publicznej publikacji przez właściciela repozytorium.
+[Pobierz Aetherian-0.1-prototype.zip](https://github.com/braijock-sudo/Lionheart/raw/refs/heads/main/downloads/Aetherian-0.1-prototype.zip)
 
 Paczka zawiera instalator, pliki moda, instrukcję po polsku i robocze modele Blender/GLB. Wymaga własnej instalacji gry zgodnej z wersją wskazaną przez instalator oraz Python 3.10 lub nowszego.
 

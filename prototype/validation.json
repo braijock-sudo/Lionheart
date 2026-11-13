@@ -1,0 +1,17 @@
+{
+  "scope": "STATIC VALIDATION AND INSTALLER TESTS ONLY",
+  "runtime_tested": false,
+  "checks_passed": [
+    "11 resources: parse/serialize, array counts, classes and references (652 nodes)",
+    "Race: 35 initial attribute points, 6 spendable, valid ranges",
+    "Energy: race-specific 100 capacity/3 regeneration; original expression preserved for other races",
+    "All three active abilities restricted to Aetherian for display and activation",
+    "61 original spell definitions exclude Aetherian in display and cast requirements",
+    "Compatibility check writes no game files",
+    "Installer writes all 79 changes and stores backups",
+    "Uninstall refuses to overwrite user edits; no partial restoration",
+    "Install/uninstall restores all original bytes and removes new resources",
+    "Source mismatch aborts before any game file changes",
+    "Simulated mid-install failure rolls back all game files"
+  ]
+}

@@ -1,0 +1,26 @@
+CRace
+{
+	Display Name=Aetherian
+	Description=Aetherians are lesser celestial beings. Prototype: choose Female; the current appearance uses the human model. Light chakrams and three racial abilities use a shared 100-point Energy pool (the engine still calls it Mana), regenerating 3 per second.
+	Head Model Name=Human
+	Number of Tagged Skills=3
+	Number of Racial Traits=0
+	Spendable Skill Points to Start With=0
+	Can be selected by player=1
+	Initial CharacterAttribute Values=Array
+	{
+		Character Attributes/(AG) Agility=6,2,10
+		Character Attributes/(CH) Charisma=6,2,10
+		Character Attributes/(EN) Endurance=4,1,9
+		Character Attributes/(IN) Intelligence=5,3,10
+		Character Attributes/(LK) Luck=4,1,10
+		Character Attributes/(PE) Perception=6,2,10
+		Character Attributes/(ST) Strength=4,1,9
+	}
+	Initial Character Attribute Maximum Total=41
+	Character Model=Array
+	{
+		Male=Characters/Player Characters/Human Female
+		Female=Characters/Player Characters/Human Female
+	}
+}

@@ -1,0 +1,148 @@
+CSkillDescription
+{
+	PlugIn Behaviors=Array
+	{
+		Item Count=4
+		PlugIn Behavior=CPlugInBehaviorSpell
+		{
+			ManaUse=CConstant
+			{
+				Constant Value=20
+			}
+			Duration=CConstant
+			{
+				Constant Value=12
+			}
+			Automatically disable recasting of spell for duration=1
+			Maximum Range=CConstant
+			{
+				Constant Value=700
+			}
+		}
+		PlugIn Behavior=CPlugInBehaviorLaunchAction
+		{
+			Launch Action=CMultipleActionsAction
+			{
+				Action=Array
+				{
+					Item Count=3
+					Action=CAddCharacterModifierToCharacterAction
+					{
+						Modifier Description=Boski Ogien
+						Modification is permanent=0
+						Character to modify=$caster
+						Modifiers=Array
+						{
+							Item Count=1
+							Modifier=CCharacterModifierDerivedAttribute
+							{
+								Modification Amount=CConstant
+								{
+									Constant Value=1
+								}
+								Modification amount is a percent=0
+								Allow Accumulation=0
+								Derived character attribute to modify=Derived Character Attributes/Aetherian/Divine Fire Active
+							}
+						}
+						OPTIONAL Duration=CConstant
+						{
+							Constant Value=12
+						}
+						Expression Context=$caster
+					}
+					Action=CSpawnEffectAction
+					{
+						Explosion Model=Spell Effects/Hits and Effects/Target Affected/Divine Strength
+						Location Entity=$caster
+						Make effect a child of the location entity=1
+						X Offset=0
+						Y Offset=0
+						Height Offset=0
+						Play Default Sound=1
+						Action to execute After Effect=
+					}
+					Action=CDisplayAffectingPlayerIconAction
+					{
+						Character Being Affected=$caster
+						Affect Description=Boski Ogien
+						Icon=Temporary Modifier HUD Icons/Divine Spell Effects/Divine Power
+						Duration=CConstant
+						{
+							Constant Value=12
+						}
+						Expression Context=$caster
+					}
+				}
+			}
+		}
+		PlugIn Behavior=CPlugInBehaviorPlaySequence
+		{
+			Granny Animations=Array
+			{
+				Item Count=0
+			}
+			Sequence Name=SpellCast
+			Random Sequence Selection=0
+			Sequence Index=-1
+		}
+		PlugIn Behavior=CPlugInBehaviorAttack
+		{
+			Max Attack Range=700
+			Is Location Based=1
+			Can Use Slayer Mode=0
+			Can Use Sniper Mode=0
+			Action On Hit=
+			Action On Miss=
+		}
+	}
+	Display Name=Boski Ogien
+	Parent Display Template=
+	Description=20 Energy; 12s recovery. For 12 seconds, Dawn Chakram and Chakram Throw deal +2-4 fire damage. Does not stack.
+	Character Creation Screen Description=20 Energy; 12s recovery. For 12 seconds, Dawn Chakram and Chakram Throw deal +2-4 fire damage. Does not stack.
+	Expressions=CNamedExpressionsArray
+	{
+		Expressions=Array
+		{
+			Array Count=0
+		}
+	}
+	Parent Skill=Skills/Aetherian
+	Value Type=Normal
+	Value Differential=0
+	Can be selected as Tag Skill=0
+	Image=Skills/Magic Divine/Defensive/Holy Fire
+	Amount To Increase Value By With Each Upgrade=0
+	Minimum Value=1
+	Maximum Value=1
+	Sort Priority=2
+	Initial Value=CConstant
+	{
+		Constant Value=1
+	}
+	Initial Minimum & Maximum=1.000000,1.000000
+	Display and Cast Requirements=Array
+	{
+		Item Count=1
+		Requirements=CIsRace
+		{
+			Acceptable Races=Array
+			{
+				Item Count=1
+				Acceptable Race=Races/Aetherian
+			}
+		}
+	}
+	Cast Requirements=Array
+	{
+		Item Count=1
+		Requirements=CIsRace
+		{
+			Acceptable Races=Array
+			{
+				Item Count=1
+				Acceptable Race=Races/Aetherian
+			}
+		}
+	}
+}
